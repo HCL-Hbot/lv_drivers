@@ -36,16 +36,7 @@ install(
   PATTERN ".git*" EXCLUDE
   PATTERN "CMakeFiles" EXCLUDE
   PATTERN "docs" EXCLUDE
-  PATTERN "lib" EXCLUDE
-  PATTERN "*.pc.in" EXCLUDE)
-
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${PKG_LVGL_CFLAGS}")
-
-configure_file("${CMAKE_SOURCE_DIR}/lv-drivers.pc.in" lv-drivers.pc @ONLY)
-
-install(
-  FILES "${CMAKE_BINARY_DIR}/lv-drivers.pc"
-  DESTINATION "${LIB_INSTALL_DIR}/pkgconfig/")
+  PATTERN "lib" EXCLUDE)
 
 file(GLOB LV_DRIVERS_PUBLIC_HEADERS "${CMAKE_SOURCE_DIR}/lv_drv_conf.h")
 
