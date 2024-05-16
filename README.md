@@ -1,7 +1,3 @@
-# Display and Touch pad drivers
+# HCL-Healthbot LV-Lowlevel Driver Support
+This repo is the modified or better said ported LV lowlevel drivers support, specifically for GC9A01 on the RPI Pico (and W).
 
-Display controller and touchpad driver to can be directly used with [LVGL](https://lvgl.io/).
-
-To learn more about using drivers in LittlevGL visit the [Porting guide](https://docs.lvgl.io/latest/en/html/porting/index.html).
-
-If you used a new display or touchpad driver with LittlevGL please share it with other people!
