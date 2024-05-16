@@ -7,7 +7,8 @@
 #define GC9A01_H
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 /*********************
@@ -50,17 +51,17 @@ extern "C" {
  **********************/
 
 int GC9A01_init(void);
-void GC9A01_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p);
-void GC9A01_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t color);
-void GC9A01_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t * color_p);
-void GC9A01_setRotation(uint8_t m);
-void GC9A01_fillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);
-void GC9A01_fillScreen(uint16_t color);
-uint16_t GC9A01_Color565(uint8_t r, uint8_t g, uint8_t b);
-void GC9A01_invertDisplay(bool i);
-void GC9A01_drawPixel(int16_t x, int16_t y, uint16_t color);
-void GC9A01_drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
-void GC9A01_drawFastVLine(int16_t x, int16_t y, int16_t w, uint16_t color);
+void GC9A01_flush_displays(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p);
+void GC9A01_fill(const uint8_t display_id, int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t color);
+void GC9A01_map(const uint8_t display_id, int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t *color_p);
+void GC9A01_setRotation(const uint8_t display_id, uint8_t m);
+void GC9A01_fillRect(const uint8_t display_id, int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);
+void GC9A01_fillScreen(const uint8_t display_id, uint16_t color);
+uint16_t GC9A01_Color565(const uint8_t display_id, uint8_t r, uint8_t g, uint8_t b);
+void GC9A01_invertDisplay(const uint8_t display_id, bool i);
+void GC9A01_drawPixel(const uint8_t display_id, int16_t x, int16_t y, uint16_t color);
+void GC9A01_drawFastHLine(const uint8_t display_id, int16_t x, int16_t y, int16_t w, uint16_t color);
+void GC9A01_drawFastVLine(const uint8_t display_id, int16_t x, int16_t y, int16_t w, uint16_t color);
 
 /**********************
  *      MACROS
@@ -73,4 +74,3 @@ void GC9A01_drawFastVLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 #endif
 
 #endif /* GC9A01_H */
-
